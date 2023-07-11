@@ -1,0 +1,8 @@
+@import 'mixins';
+
+@include font-face(Rubik, Rubik-Light, 300, normal);
+@include font-face(Rubik, Rubik-LightItalic, 300, italic);
+@include font-face(Rubik, Rubik-Regular, 400, normal);
+@include font-face(Rubik, Rubik-Italic, 400, italic);
+@include font-face(Rubik, Rubik-Medium, 500, normal);
+@include font-face(Rubik, Rubik-MediumItalic, 500, italic);

@@ -1,0 +1,40 @@
+@import "scss/reset";
+@import "scss/fonts";
+@import "scss/global";
+@import "scss/libs";
+@import "scss/mixins";
+@import "scss/vars";
+
+
+.logo {
+  transition: box-shadow 0.5s, opacity 0.5s;
+  border-radius: 5px;
+  display: inline-block;
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($orange-900, 0.7);
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.lock {
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}

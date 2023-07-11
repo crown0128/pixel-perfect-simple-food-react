@@ -1,0 +1,43 @@
+$white: #fff;
+$silver-100: #f9faff;
+$silver-200: #ececec;
+$silver-300: #FFF2ED;
+$silver-400: #EEEFF3;
+$gray: #c2c2c2;
+$orange-700: #FFAE94;
+$orange-800: #FF7A50;
+$orange-900: #ff6838;
+$darkBlue-900: #363853;
+$dark: #31352b;
+$black: #000;
+$breakpoints: (
+        'phone': 560px,
+        'tablet': 768px,
+        'tablet-2': 992px,
+        'desktop': 1230px
+);
+
+%rubikLight-300 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+}
+
+%rubikLightItalic-300 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+}
+
+%rubikRegular-400 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+%rubikMedium-500 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+}
+
+%rubikMediumItalic-500 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+}

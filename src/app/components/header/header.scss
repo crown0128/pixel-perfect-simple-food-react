@@ -1,0 +1,153 @@
+@import "src/app/scss/vars";
+@import "src/app/scss/mixins";
+@import "src/app/scss/global";
+
+.header {
+  padding-top: 60px;
+  @include mq('desktop') {
+    padding-top: 50px;
+  }
+  @include mq('tablet-2') {
+    padding-top: 40px;
+  }
+  @include mq('tablet') {
+    padding-top: 30px;
+  }
+  @include mq('phone') {
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+
+  & .logo__img {
+    @include mq('desktop') {
+      width: 179px;
+      height: 35px;
+    }
+    @include mq('tablet-2') {
+      width: 158px;
+      height: 31px;
+    }
+    @include mq('tablet') {
+      width: 136px;
+      height: 27px;
+    }
+    @include mq('phone') {
+      width: 115px;
+      height: 23px;
+    }
+  }
+}
+
+.menu {
+  @extend .df-sb-aic;
+  margin-right: 10px;
+}
+
+.menu-list-show {
+  display: flex;
+  @include mq('phone') {
+    display: none;
+  }
+}
+
+.burger-button {
+  display: none;
+  @include burger-button(30px, 20px, 2px);
+  @include mq('phone') {
+    display: block;
+  }
+}
+
+.menu-right {
+  display: flex;
+}
+
+.user-nav {
+  display: flex;
+  @include mq('phone') {
+    margin-right: 15px;
+  }
+
+  &__link {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 5px;
+    transition: all 0.3s;
+
+    &:focus {
+      background-color: rgba($orange-800, 0.1);
+      box-shadow: 0 0 0 2px rgba($orange-900, 0.7);
+    }
+
+    &:hover {
+      background: $orange-800;
+    }
+
+    &:active {
+      background: $silver-300;
+      box-shadow: none;
+    }
+
+    &:focus .user-nav__link-img {
+      stroke: $darkBlue-900;
+    }
+
+    &:hover .user-nav__link-img {
+      stroke: $white;
+    }
+
+    &:active .user-nav__link-img {
+      stroke: $darkBlue-900;
+    }
+
+    &:hover .user-nav__num {
+      color: $orange-900;
+      background-color: $white;
+    }
+
+    &:active .user-nav__num {
+      color: $white;
+      background-color: $orange-900;
+    }
+  }
+
+  &__link-img {
+    fill: transparent;
+    stroke: $darkBlue-900;
+    width: 19px;
+    height: 19px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+      @include mq('desktop') {
+        margin-right: 7px;
+      }
+      @include mq('tablet-2') {
+        margin-right: 4px;
+      }
+      @include mq('tablet') {
+        margin-right: 1px;
+      }
+      @include mq('phone') {
+        margin-right: 9px;
+      }
+    }
+  }
+
+  &__num {
+    position: absolute;
+    padding: 0 4px;
+    border-radius: 50%;
+    color: $white;
+    background-color: $orange-900;
+    top: 5px;
+    left: 22px;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+}

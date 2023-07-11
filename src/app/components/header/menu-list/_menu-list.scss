@@ -1,0 +1,51 @@
+@import 'src/app/scss/vars';
+@import 'src/app/scss/mixins';
+
+.list {
+  display: flex;
+  align-items: center;
+  margin-right: 52px;
+  @include mq('desktop') {
+    margin-right: 40px;
+  }
+  @include mq('tablet-2') {
+    margin-right: 25px;
+  }
+  @include mq('tablet') {
+    margin-right: 10px;
+  }
+  @include mq('phone') {
+    margin-top: 25px;
+    margin-right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 45px;
+      @include mq('desktop') {
+        margin-right: 33px;
+      }
+      @include mq('tablet-2') {
+        margin-right: 22px;
+      }
+      @include mq('tablet') {
+        margin-right: 11px;
+      }
+      @include mq('phone') {
+        margin-right: 0;
+      }
+    }
+
+    @include mq('phone') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    &--active {
+      color: $orange-900;
+    }
+  }
+}
