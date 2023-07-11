@@ -1,0 +1,68 @@
+@import 'src/app/scss/vars';
+@import 'src/app/scss/mixins';
+
+.social-list {
+  display: flex;
+  gap: 13px;
+
+  &__img {
+    width: 39px;
+    height: 39px;
+    stroke: $dark;
+    fill: $silver-200;
+    border-radius: 50%;
+    transition: all 0.3s;
+
+    &:focus {
+      fill: $silver-200;
+      stroke: $orange-900;
+    }
+
+    &:hover {
+      fill: $orange-900;
+      stroke: $white;
+    }
+
+    &:active {
+      fill: $silver-300;
+      stroke: $orange-900;
+    }
+  }
+}
+
+.address {
+  &__contact {
+    display: block;
+    padding-bottom: 15px;
+    padding-left: 35px;
+    font-size: 16px;
+    line-height: 2;
+    position: relative;
+
+    &::before {
+      @include pseudo_image_position;
+      top: 3px;
+      left: 0;
+      width: 24px;
+      height: 24px;
+    }
+
+    &--address {
+      &::before {
+        background-image: url('../../../images/icons/address.svg');
+      }
+    }
+
+    &--phone {
+      &::before {
+        background-image: url('../../../images/icons/phone.svg');
+      }
+    }
+
+    &--email {
+      &::before {
+        background-image: url('../../../images/icons/email.svg');
+      }
+    }
+  }
+}

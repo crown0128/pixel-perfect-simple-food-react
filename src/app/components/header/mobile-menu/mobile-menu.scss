@@ -1,0 +1,42 @@
+@import "src/app/scss/vars";
+@import "src/app/scss/global";
+
+.mobile-menu {
+  position: absolute;
+  background-color: $white;
+  z-index: 2;
+  left: 0;
+  right: 75px;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  transform: translateX(-100%);
+  padding-left: 15px;
+  transition: transform .5s;
+
+  &__header {
+    @extend .df-sb-aic;
+    padding: 25px 25px 15px 0;
+  }
+
+  &__button {
+    display: flex;
+  }
+
+  &__hr {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $silver-400;
+    margin-left: -15px;
+  }
+
+  &__img {
+    width: 18px;
+    height: 18px;
+    fill: $darkBlue-900;
+  }
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
