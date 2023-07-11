@@ -1,5 +1,5 @@
 import React from "react";
-import "./_menu-list.scss"
+import "./menu-list.scss"
 
 const MenuList = () => {
   // const menu =['Главная','Блюда', 'Контакты'];

@@ -1,7 +1,7 @@
 @import 'vars';
 @import 'mixins';
 
-body {
+body  {
   background-color: $silver-100;
   @extend %rubikRegular-400;
   font-size: 18px;

@@ -3,7 +3,7 @@ import "./header.scss";
 import logo from "../../images/icons/logo.svg";
 import search from "../../images/icons/search.svg";
 import cart from "../../images/icons/cart.svg"
-import MenuList from "./menu-list/_menu-list";
+import MenuList from "./menu-list/menu-list";
 
 const Header = () => {
   return <header className="header">

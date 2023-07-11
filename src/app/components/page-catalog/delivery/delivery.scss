@@ -1,0 +1,103 @@
+@import "src/app/scss/mixins";
+
+.delivery {
+  @include mq('phone') {
+    margin-bottom: 30px;
+  }
+
+  &__header {
+    font-size: 66px;
+    font-weight: 500;
+    margin-top: 10px;
+    text-transform: uppercase;
+    @include mq('desktop') {
+      font-size: 60px;
+    }
+    @include mq('tablet-2') {
+      font-size: 53px;
+    }
+    @include mq('tablet') {
+      font-size: 47px;
+    }
+    @include mq('phone') {
+      font-size: 40px;
+    }
+  }
+
+  &__time {
+    display: block;
+    color: $orange-900;
+  }
+
+  &__description {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    @include line-clamp(3);
+    @include mq('desktop') {
+      font-size: 19px;
+    }
+    @include mq('tablet-2') {
+      font-size: 18px;
+    }
+    @include mq('tablet') {
+      font-size: 17px;
+    }
+    @include mq('phone') {
+      font-size: 16px;
+    }
+  }
+
+  &__button {
+    margin-right: 34px;
+  }
+
+  &__promise {
+    margin-top: -30px;
+    max-width: 450px;
+    margin-right: -70%;
+    z-index: 1;
+  }
+
+  &__hyperlink {
+    @include mq('desktop') {
+      font-size: 19px !important; //без important не работает, хотя должно, объясни пж-та почему так
+    }
+    @include mq('tablet-2') {
+      font-size: 18px !important;
+    }
+    @include mq('tablet') {
+      font-size: 17px !important;
+    }
+    @include mq('phone') {
+      font-size: 16px !important;
+    }
+  }
+
+  &__img {
+    max-width: 560px;
+    height: 660px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    @include mq('desktop') {
+      max-width: 484px;
+      height: 570px;
+    }
+    @include mq('tablet-2') {
+      max-width: 407px;
+      height: 480px;
+    }
+    @include mq('tablet') {
+      max-width: 331px;
+      height: 390px;
+      opacity: 0.4;
+    }
+    @include mq('phone') {
+      max-width: 254px;
+      height: 300px;
+      opacity: 0.2;
+    }
+  }
+}
