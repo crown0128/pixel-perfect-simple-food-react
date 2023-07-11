@@ -1,7 +1,7 @@
 {
   "name": "simple-food-react",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.1",
+  "homepage": "https://svdotsenko.github.io/simple-food-react",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -15,7 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -36,6 +38,7 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.63.4"
+    "sass": "^1.63.4",
+    "gh-pages": "^5.0.0"
   }
 }
