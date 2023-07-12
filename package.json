@@ -1,6 +1,6 @@
 {
   "name": "simple-food-react",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "homepage": "https://svdotsenko.github.io/simple-food-react",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

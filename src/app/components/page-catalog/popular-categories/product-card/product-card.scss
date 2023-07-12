@@ -1,0 +1,50 @@
+@import "src/app/scss/vars";
+@import "src/app/scss/mixins";
+@import "src/app/scss/global";
+
+.product-card {
+  @extend .df-sb-aic;
+  flex-direction: column;
+  background-color: $white;
+  padding: 20px 15px;
+  border-radius: 5px;
+  height: 100%;
+  transition: box-shadow 0.3s;
+  @include mq('phone') {
+    padding-bottom: 34px;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 1px $orange-900;
+  }
+
+  &__name, &__price {
+    font-size: 15px;
+  }
+
+  &__name {
+    @include line-clamp(2);
+    margin-bottom: 15px;
+    @include mq('phone') {
+      margin-bottom: 0;
+      margin-top: -10px;
+    }
+  }
+
+  &__price {
+    font-weight: 500;
+    line-height: 1.4;
+    @include mq('phone') {
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
+  }
+
+  &__button.button {
+    font-size: 14px;
+    padding: 7px 16px;
+    @include mq('phone') {
+      padding: 6px 15px;
+    }
+  }
+}

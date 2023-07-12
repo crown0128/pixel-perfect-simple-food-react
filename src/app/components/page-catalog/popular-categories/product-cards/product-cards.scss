@@ -1,0 +1,29 @@
+@import "src/app/scss/mixins";
+
+.product-cards {
+  display: grid;
+  grid-gap: 30px;
+  margin-bottom: 60px;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, 210px);
+  grid-auto-rows: minmax(299px, auto);
+  @include mq('desktop') {
+    grid-row-gap: 25px;
+    margin-bottom: 53px;
+  }
+  @include mq('tablet-2') {
+    justify-content: space-around;
+    grid-row-gap: 20px;
+    margin-bottom: 45px;
+  }
+  @include mq('tablet') {
+    grid-row-gap: 15px;
+    margin-bottom: 38px;
+  }
+  @include mq('phone') {
+    grid-template-columns: repeat(2, minmax(170px, 210px));
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+    margin-bottom: 17px;
+  }
+}
