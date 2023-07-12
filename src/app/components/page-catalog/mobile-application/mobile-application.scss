@@ -1,0 +1,80 @@
+@import 'src/app/scss/mixins';
+@import 'src/app/scss/global';
+
+
+.mobile-application {
+  padding: 145px 0 120px 0;
+  @include mq('phone') {
+    padding: 41px 0 40px 0;
+  }
+
+  &__description {
+    margin-right: -100%;
+    z-index: 1;
+    max-width: 540px;
+    @include mq('phone') {
+      max-width: 345px;
+    }
+  }
+
+  &__header {
+    @extend .section__header;
+    margin-bottom: 45px;
+    @include mq('desktop') {
+      margin-bottom: 38px;
+    }
+    @include mq('tablet-2') {
+      margin-bottom: 30px;
+    }
+    @include mq('tablet') {
+      margin-bottom: 23px;
+    }
+    @include mq('phone') {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    @include line-clamp(3);
+    line-height: 1.5;
+    opacity: 0.9;
+    font-size: 20px;
+    margin-bottom: 30px;
+    @include mq('desktop') {
+      font-size: 19px;
+      margin-bottom: 26px;
+    }
+    @include mq('tablet-2') {
+      font-size: 18px;
+      margin-bottom: 23px;
+    }
+    @include mq('tablet') {
+      font-size: 16px;
+      margin-bottom: 19px;
+    }
+    @include mq('phone') {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__img {
+    max-width: 570px;
+    width: 100%;
+    height: 380px;
+    @include mq('tablet-2') {
+      opacity: 0.6;
+    }
+    @include mq('tablet') {
+      opacity: 0.2;
+    }
+    @include mq('phone') {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+}

@@ -1,0 +1,124 @@
+@import 'src/app/scss/mixins';
+
+.stay-home {
+  @include mq('phone') {
+    margin-bottom: 30px;
+  }
+
+  &__img {
+    max-width: 440px;
+    height: 585px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    @include mq('desktop') {
+      max-width: 417px;
+      height: 554px;
+    }
+    @include mq('tablet-2') {
+      max-width: 393px;
+      height: 524px;
+    }
+    @include mq('tablet') {
+      max-width: 369px;
+      height: 493px;
+      opacity: 0.4;
+    }
+    @include mq('phone') {
+      max-width: 345px;
+      height: 462px;
+      opacity: 0.2;
+    }
+  }
+
+  &__text {
+    max-width: 470px;
+    margin-left: -100%;
+    z-index: 1;
+    @include mq('phone') {
+      margin-top: -30px;
+    }
+  }
+
+  &__promise {
+    @include line-clamp(3);
+    font-size: 20px;
+    line-height: 150%;
+    margin-bottom: 30px;
+    @include mq('desktop') {
+      font-size: 19px;
+      margin-bottom: 31px;
+    }
+    @include mq('tablet-2') {
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+    @include mq('tablet') {
+      font-size: 17px;
+      margin-bottom: 33px;
+    }
+    @include mq('phone') {
+      font-size: 16px;
+      margin-bottom: 65px;
+    }
+  }
+
+  &__advantages {
+    display: grid;
+    grid-gap: 20px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    font-size: 24px;
+    @include mq('desktop') {
+      font-size: 22px;
+    }
+    @include mq('tablet-2') {
+      font-size: 20px;
+    }
+    @include mq('tablet') {
+      font-size: 19px;
+    }
+    @include mq('phone') {
+      font-size: 18px;
+    }
+  }
+
+  &__advantages-item {
+    padding-left: 64px;
+    @include mq('phone') {
+      padding-left: 44px;
+    }
+    position: relative;
+
+    &::before {
+      @include pseudo_image_position;
+      top: 0;
+      left: 0;
+      width: 34px;
+      height: 34px;
+    }
+
+    &--quick {
+      &::before {
+        background-image: url('../../../images/icons/stopwatch.svg');
+      }
+    }
+
+    &--polite {
+      &::before {
+        background-image: url('../../../images/icons/delivery.svg');
+      }
+    }
+
+    &--outlets {
+      &::before {
+        background-image: url('../../../images/icons/shop.svg');
+      }
+    }
+  }
+
+  &__button {
+    @include mq('phone') {
+      padding: 13px 34px !important;
+    }
+  }
+}
