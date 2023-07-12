@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useEffect} from "react";
+import mixitup from "mixitup";
 import "./product-cards.scss"
 import ProductCard from "../product-card/product-card";
 
@@ -41,7 +42,14 @@ const productCards = [
 ];
 
 const ProductCards = () => {
+  useEffect(() => {
+    mixitup(".product-cards");
+  }, []);
+
   return <ul className="product-cards">
+    {productCards.map(card => <li key={card.id} className={`mix ${card.category}`}>
+      <ProductCard {...card} />
+    </li>)}
     {productCards.map(card => <li key={card.id} className={`mix ${card.category}`}>
       <ProductCard {...card} />
     </li>)}

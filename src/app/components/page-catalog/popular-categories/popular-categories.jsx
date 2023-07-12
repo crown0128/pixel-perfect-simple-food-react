@@ -9,7 +9,6 @@ const PopularCategories = () => {
       <h2 className="section__header center">Популярные категории </h2>
       <ButtonsBurger />
       <ProductCards />
-      <ProductCards />
       <a className="animation hyperlink" href="#">Показать ещё</a>
     </div>
   </section>;
