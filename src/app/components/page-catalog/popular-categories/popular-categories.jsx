@@ -1,52 +1,18 @@
 import React from "react";
 import "./popular-categories.scss";
-import burger from "../../../images/icons/burger.svg";
-import pizza from "../../../images/icons/pizza.svg";
-import sandwich from "../../../images/icons/sandwich.svg";
-import asia from "../../../images/icons/asia.svg";
-import sets from "../../../images/icons/set.svg";
 import cheese from "../../../images/cheese.png";
 import beef from "../../../images/beef.png";
 import queen from "../../../images/queen.png";
 import black from "../../../images/black.png";
 import chicken from "../../../images/chicken.png";
+import ButtonsBurger from "./buttons-burger/buttons-burger";
 
 const PopularCategories = () =>  {
   return <section className="popular-categories section"  id="popular-categories">
     <div className="container">
       <h2 className="section__header center">Популярные категории </h2>
-      <ul className="popular-categories__buttons">
-        <li>
-          <button className="button-burger" data-filter="all" type="button">
-            <img className="button-burger__img" src={burger} alt="burger" />
-            <span>Бургеры</span>
-          </button>
-        </li>
-        <li>
-          <button className="button-burger" data-filter=".pizza" type="button">
-            <img className="button-burger__img" src={pizza} alt="pizza" />
-            <span>Пицца</span>
-          </button>
-        </li>
-        <li>
-          <button className="button-burger" data-filter=".sandwich" type="button">
-            <img className="button-burger__img" src={sandwich} alt="sandwich" />
-            <span>Сендвичи</span>
-          </button>
-        </li>
-        <li>
-          <button className="button-burger" data-filter=".asia" type="button">
-            <img className="button-burger__img" src={asia} alt="asia" />
-            <span>Азиатская кухня</span>
-          </button>
-        </li>
-        <li>
-          <button className="button-burger" data-filter=".set" type="button">
-            <img className="button-burger__img" src={sets} alt="sets" />
-            <span>Сеты</span>
-          </button>
-        </li>
-      </ul>
+      <ButtonsBurger/>
+
       <ul className="popular-categories__content">
         <li className="mix burger">
           <article className="product-card">
