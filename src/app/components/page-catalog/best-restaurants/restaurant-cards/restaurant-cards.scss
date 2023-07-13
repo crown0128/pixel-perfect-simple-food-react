@@ -1,0 +1,21 @@
+@import 'src/app/scss/mixins';
+@import 'slick-carousel/slick/slick';
+@import 'slick-carousel/slick/slick-theme';
+
+.restaurant-cards {
+  &__items {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fit, minmax(345px, 370px));
+    grid-auto-rows: 419px;
+    grid-gap: 30px;
+  }
+
+  &__item {
+    @include mq('phone') {
+      min-width: 345px;
+      max-width: 370px;
+      height: 419px;
+    }
+  }
+}

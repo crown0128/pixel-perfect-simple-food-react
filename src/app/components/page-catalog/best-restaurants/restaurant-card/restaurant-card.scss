@@ -1,0 +1,97 @@
+@import 'src/app/scss/vars';
+@import 'src/app/scss/mixins';
+@import 'src/app/scss/global';
+
+
+.restaurant-card {
+  border-radius: 10px;
+  background: $white;
+  box-shadow: 0 3px 3px 0 rgba($black, 0.1);
+  height: 100%;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 3px 15px 0 rgba($orange-900, 0.5);
+  }
+
+  &__name {
+    @include line-clamp(1);
+    color: $dark;
+    font-size: 24px;
+    line-height: 1.3;
+    margin: 15px 0 20px 20px;
+    font-weight: 400;
+  }
+
+  &__timetable {
+    @extend .df-sb-aic;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__timetable-time {
+    color: $dark;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.7;
+    opacity: 0.9;
+    position: relative;
+    padding-left: 30px;
+
+    &::before {
+      @include pseudo_image_position;
+      top: 5px;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      background-image: url('../../../../images/icons/watch.svg');
+    }
+  }
+
+  &__timetable-link {
+    display: grid;
+    place-items: center;
+    padding-left: 7px;
+    padding-right: 7px;
+    background-color: $orange-900;
+    border-radius: 20px;
+    width: 79px;
+    height: 33px;
+    transition: background-color 0.3s, box-shadow 0.3s, justify-items 0.3s;
+
+    &:focus {
+      background-color: #FFF2ED;
+      box-shadow: 0 0 0 2px rgba($orange-900, 0.7);
+    }
+
+    &:hover {
+      justify-items: end;
+      background-color: $white;
+      border-radius: 20px;
+      box-shadow: 0 0 0 2px rgba($orange-900, 0.7);
+    }
+
+    &:active {
+      background-color: #FFF2ED;
+      justify-items: center;
+      box-shadow: none;
+    }
+
+    &:focus .restaurant-card__timetable-img,
+    &:hover .restaurant-card__timetable-img,
+    &:active .restaurant-card__timetable-img {
+      fill: $orange-900;//todo разобраться как менять цвет
+    }
+  }
+
+  &__timetable-img {
+    width: 24px;
+    height: 24px;
+    fill: $white;
+    transition: fill 0.3s;
+  }
+
+  &__img {
+    border-radius: 10px 10px 0 0;
+  }
+}

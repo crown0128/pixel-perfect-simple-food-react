@@ -3,7 +3,7 @@ import "./menu-list.scss"
 
 const MenuList = () => {
   // const menu =['Главная','Блюда', 'Контакты'];
-
+//todo сделать через цикл
     return <ul className="list">
         <li className="list__item">
             <a className="animation list__link list__link--active" href="#">Главная</a>

@@ -6,7 +6,6 @@ import close from "../../../images/icons/close.svg"
 import Contacts from "../../common/contacts/contacts";
 
 const MobileMenu = () => {
-
   return <aside className="mobile-menu">
     <header className="mobile-menu__header">
       <a className="logo" href="#">
